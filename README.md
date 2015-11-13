@@ -39,7 +39,10 @@ app.post('/register', checkpoints.register, function(req, res) {
 ```javascript
 // require checkpoint
 var checkpoint = require('checkpoint');
+
+app.use(checkpoint(config));
 ```
+##### Config Options:
 Option    | Description
 ----------|------------
 required? | optional, defaults to true
