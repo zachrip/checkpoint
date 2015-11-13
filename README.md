@@ -1,6 +1,6 @@
 _Currently under construction, please post issues on GitHub._
 
-###Example
+### Example
 
 ```javascript
 var checkpoint = require('checkpoint');
@@ -35,7 +35,7 @@ app.post('/register', checkpoints.register, function(req, res) {
 });
 ```
 
-###Api
+### Api
 ```javascript
 // require checkpoint
 var checkpoint = require('checkpoint');
