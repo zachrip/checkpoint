@@ -40,11 +40,11 @@ app.post('/register', checkpoints.register, function(req, res) {
 // require checkpoint
 var checkpoint = require('checkpoint');
 ```
-Option   | Description
----------|------------
-required | optional, defaults to true
-method?  | optional, defaults to 'post',
-min?     | optional, checks if value is greater than or equal to the min, works on strings, numbers, and dates
-max?     | optional, checks if value is less than or equal to the max, works on strings, numbers, and dates
-test?    | a `function(val, next)` or `RegExp` - message can be supplied in `next`
-message? | optional, defaults to test message or '[key]'
+Option    | Description
+----------|------------
+required? | optional, defaults to true
+method?   | optional, defaults to 'post',
+min?      | optional, checks if value is greater than or equal to the min, works on strings, numbers, and dates
+max?      | optional, checks if value is less than or equal to the max, works on strings, numbers, and dates
+test?     | a `function(val, next)` or `RegExp` - message can be supplied in `next`
+message?  | optional, defaults to test message or '[key]'

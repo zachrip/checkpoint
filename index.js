@@ -16,6 +16,9 @@ function checkpoint(config) {
 		async.map(keys, function (key, cb) {
 			cb(new Promise(function (resolve, reject) {
 				var validator = config[key];
+
+				validator.required  = validator.required || true;
+
 				var method = validator.method ? validator.method.toLowerCase() : 'post';
 
 				var params = method === 'post' ? req.body : method === 'get' ? req.query : method === 'headers' ? req.headers : method === 'cookies' ? req.cookies : req.body;
