@@ -1,0 +1,32 @@
+{
+  "name": "checkpoint",
+  "version": "2.0.0",
+  "description": "Validate and sanitize fields.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "middleware",
+    "express",
+    "fields",
+    "inputs",
+    "validate",
+    "sanitize"
+  ],
+  "author": "Zach Ripka",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.0",
+    "bluebird": "^3.0.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachrip/checkpoint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zachrip/checkpoint/issues"
+  },
+  "homepage": "https://github.com/zachrip/checkpoint#readme"
+}
