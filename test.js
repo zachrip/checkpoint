@@ -32,8 +32,7 @@ var c = checkpoint({
 	},
 	password: {
 		method: 'get',
-		required: true,
-		test: /.+/
+		required: true
 	},
 	email: {
 		required: true,

@@ -6,32 +6,32 @@ _Currently under construction, please post issues on GitHub._
 var checkpoint = require('checkpoint');
 
 var checkpoints = {
-	register: checkpoint({
-		email: {
-			required: true,
-			message: 'A valid email is required!',
-			test: /\S+@\S+\.\S+/ // a basic regex for testing emails, don't use in production
-		},
-		username: {
-			required: true,
-			message: 'A valid username is required!'
-			test: function(val, next) {
-				if(val === expectedVal) {
-					next();
-				} else {
-					next('Val was not expected value.'); // error string, if left blank defaults to validator message
-				}
-			}
-		}
-	})
+    register: checkpoint({
+        email: {
+            required: true,
+            message: 'A valid email is required!',
+            test: /\S+@\S+\.\S+/ // a basic regex for testing emails, don't use in production
+        },
+        username: {
+            required: true,
+            message: 'A valid username is required!'
+            test: function(val, next) {
+                if(val === expectedVal) {
+                    next();
+                } else {
+                    next('Val was not expected value.'); // error string, if left blank defaults to validator message
+                }
+            }
+        }
+    })
 }
 
 app.post('/register', checkpoints.register, function(req, res) {
-	if(req.checkpoint.passed) {
-		// all required values passed their tests
-	} else {
-		res.send(req.checkpoint.messages); // array of failed values messages
-	}
+    if(req.checkpoint.passed) {
+        // all required values passed their tests
+    } else {
+        res.send(req.checkpoint.messages); // array of failed values messages
+    }
 });
 ```
 
