@@ -1,6 +1,6 @@
 {
   "name": "checkpoint",
-  "version": "2.0.1-3",
+  "version": "2.0.2",
   "description": "Validate and sanitize fields.",
   "main": "index.js",
   "scripts": {

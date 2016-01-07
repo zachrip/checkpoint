@@ -25,7 +25,7 @@ function checkpoint(config) {
 
 				if(params) {
 					var val = params[key];
-					if(val) {
+					if(val !== undefined) {
 						var test = validator.test;
 
 						if(test) {
