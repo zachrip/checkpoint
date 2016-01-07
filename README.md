@@ -30,7 +30,7 @@ app.post('/register', checkpoints.register, function(req, res) {
     if(req.checkpoint.passed) {
         // all required values passed their tests
     } else {
-        res.send(req.checkpoint.messages); // array of failed values messages
+        res.send(req.checkpoint.errors); // array of failed values messages
     }
 });
 ```
